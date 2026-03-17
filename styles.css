@@ -377,10 +377,10 @@ a.service-card {
 }
 
 .step-card {
-  background: var(--bg-card);
-  border: 1px solid rgba(200, 207, 255, 0.06);
-  border-radius: var(--radius);
-  padding: 2rem 1.75rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: default;
   text-align: center;
 }
 
@@ -432,10 +432,10 @@ a.service-card {
 }
 
 .pillar-card {
-  background: var(--bg-card);
-  border: 1px solid rgba(200, 207, 255, 0.06);
-  border-radius: var(--radius);
-  padding: 2rem 1.75rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: default;
   text-align: center;
 }
 
