@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call Summaries &amp; Follow-Up Notes, Chisenga Risk &amp; Automation</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta name="description" content="Automated call summaries and follow-up notes for insurance teams.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-logo">&larr; Back to Home</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1>Nobody became a producer to spend half their day writing call notes.</h1>
+      </div>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <section class="section">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">The Process</span>
+        <h2 class="section-title">How It Works</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-number">1</div>
+          <h3>The Call Happens</h3>
+          <p>Your producer has the conversation with a client, underwriter, or adjuster, without worrying about taking notes.</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">2</div>
+          <h3>Summary Generated</h3>
+          <p>Within minutes of the call ending, a structured summary appears: key points discussed, decisions made, and next steps.</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">3</div>
+          <h3>Pushed to Your Systems</h3>
+          <p>The summary and action items are automatically logged in your CRM or task management tool. Nothing gets lost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <section class="section">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">Results</span>
+        <h2 class="section-title">What You Get</h2>
+      </div>
+      <div class="about-bio fade-in">
+        <ul style="list-style:none;padding:0;">
+          <li style="margin-bottom:1rem;">&#10003; Clean, professional call notes after every conversation</li>
+          <li style="margin-bottom:1rem;">&#10003; Action items extracted and assigned automatically</li>
+          <li style="margin-bottom:1rem;">&#10003; Your team reclaims hours every week that used to go to documentation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="text-align:center;">
+    <div class="container fade-in">
+      <a href="https://rich-peak-eff.notion.site/9b28922dfdc44ada91c2d3c383253ff8?pvs=105" target="_blank" rel="noopener noreferrer" class="btn-gradient">Book a 20-Minute Call</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">&copy; 2026 Chisenga Risk &amp; Automation. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); } });
+    }, { threshold: 0.12 });
+    faders.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
