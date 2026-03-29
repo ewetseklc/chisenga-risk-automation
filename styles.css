@@ -519,13 +519,160 @@ a.service-card {
   flex-shrink: 0;
 }
 
+/* ── Feature grid (2x2) ──────────────────────────────── */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.support-copy {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 2rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+}
+
+.problem-body {
+  margin-top: 2rem;
+}
+
+.problem-body p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.problem-body p:last-child {
+  margin-bottom: 0;
+}
+
+.math-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.math-stat-value {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.math-stat-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.math-conclusion {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.math-disclaimer {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.about-content {
+  margin-top: 2rem;
+  max-width: 800px;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.stats-row-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.stat-block-value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-block-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.book-body {
+  margin-top: 1.5rem;
+  max-width: 640px;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
 /* ── Footer ──────────────────────────────────────────── */
 .footer {
   padding: 2rem 0;
   border-top: 1px solid rgba(200, 207, 255, 0.06);
-  text-align: center;
   font-size: 0.8rem;
   color: var(--text-muted);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.footer-social a {
+  color: var(--text-muted);
+  transition: color 0.25s;
+  display: flex;
+  align-items: center;
+}
+
+.footer-social a:hover {
+  color: var(--primary);
+}
+
+.footer-social svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* ── Section Dividers ────────────────────────────────── */
@@ -655,6 +802,15 @@ a.service-card {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 @media (min-width: 768px) {
@@ -678,10 +834,22 @@ a.service-card {
   .steps-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .math-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats-row-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats-row-4 {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
