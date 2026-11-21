@@ -52,7 +52,8 @@
   --ink: #111111;
   --muted: #111111;
   --line: #c4bdb0;
-  --accent: #5c4fd4;
+  --blue: #7692e4;
+  --accent: #3454b2; /* text-safe shade of --blue (5.6:1 on cream) for labels and links */
   --graphite: #1a1a1a;
   --periwinkle: #c8cfff;
   --on-dark: #ece7de;
@@ -655,8 +656,8 @@ button {
   top: 0.55em;
   width: 0.55rem;
   height: 0.28rem;
-  border-left: 1.5px solid var(--accent);
-  border-bottom: 1.5px solid var(--accent);
+  border-left: 1.5px solid var(--blue);
+  border-bottom: 1.5px solid var(--blue);
   transform: rotate(-45deg);
 }
 
@@ -929,7 +930,7 @@ button {
 
 .editor-note {
   background: var(--bg-module);
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--blue);
   padding: 0.75rem 1rem;
   font-size: 0.95rem;
 }
