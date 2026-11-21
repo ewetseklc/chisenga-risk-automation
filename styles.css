@@ -877,6 +877,7 @@ button {
   padding-top: 72px;
 }
 
+.page-title,
 .post-header h1 {
   font-size: clamp(2.1rem, 5vw, 3.1rem);
   font-weight: 900;
