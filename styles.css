@@ -942,6 +942,7 @@ button {
 
 .post-end h2 {
   margin-top: 0;
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
 }
 
 .post-end .btn {
