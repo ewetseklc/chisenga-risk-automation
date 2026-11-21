@@ -164,13 +164,14 @@ h3 {
   max-width: 28rem;
 }
 
-.reveal {
+/* Reveal only hides content once JavaScript has loaded (html.js is set in <head>). */
+.js .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal.in-view {
+.js .reveal.in-view {
   opacity: 1;
   transform: translateY(0);
 }
@@ -186,7 +187,7 @@ button {
   font-weight: 600;
   padding: 0.75rem 1.4rem;
   background: #7692e4;
-  color: var(--bg);
+  color: #111111;
   border: 1px solid #7692e4;
   border-radius: 9999px;
   transition: transform 0.2s ease;
@@ -203,7 +204,7 @@ button {
 
 .btn-on-dark {
   background: #7692e4;
-  color: var(--bg);
+  color: #111111;
   border-color: #7692e4;
 }
 
@@ -235,47 +236,25 @@ button {
 
 .logo {
   display: inline-flex;
-  font-family: "Basique Pro", -apple-system, sans-serif !important;
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0;
-  transition: letter-spacing 0.3s ease, color 0.3s ease;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 0 0 auto;
 }
 
-.logo:hover {
-  letter-spacing: 0.1em;
-  color: #7692e4;
+.logo-mark {
+  width: 1.6rem;
+  height: 1.6rem;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.logo span {
-  display: inline-block;
+.logo-word {
+  width: auto;
+  height: 1.15rem;
 }
 
-.logo span:nth-child(1) {
-  animation: idleWave 6s infinite 0s;
-}
-
-.logo span:nth-child(2) {
-  animation: idleWave 6s infinite 0.15s;
-}
-
-.logo span:nth-child(3) {
-  animation: idleWave 6s infinite 0.3s;
-}
-
-@keyframes idleWave {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  10% {
-    transform: translateY(-4px);
-  }
-
-  20% {
-    transform: translateY(0);
-  }
+.logo:hover .logo-mark,
+.logo:focus-visible .logo-mark {
+  transform: rotate(36deg);
 }
 
 .nav-links {
@@ -712,7 +691,16 @@ button {
 
 .footer-inner {
   display: grid;
-  gap: 0.4rem;
+  gap: 1rem;
+}
+
+.footer-brand {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.footer-brand strong {
+  font-weight: 700;
 }
 
 .footer-links {
@@ -726,7 +714,241 @@ button {
   color: var(--ink);
 }
 
-@media (min-width: 768px) {
+/* Utilities */
+.nowrap {
+  white-space: nowrap;
+}
+
+.section-note {
+  margin-top: 0.25rem;
+  max-width: 38rem;
+  font-size: 0.95rem;
+}
+
+.text-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.text-link:hover {
+  color: var(--ink);
+}
+
+/* Hi, I'm Evan */
+.about {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Photo placeholder: swap the .photo-placeholder div for <img src="/assets/evan.jpg" class="portrait"> */
+.portrait,
+.photo-placeholder {
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--bg-module);
+  border: 1px solid var(--line);
+}
+
+.photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-placeholder img {
+  width: 42%;
+  height: auto;
+  opacity: 0.55;
+}
+
+.about-copy p + p {
+  margin-top: 1.15rem;
+}
+
+/* FAQ */
+.faq {
+  margin-top: 2rem;
+  max-width: 44rem;
+  border-top: 1px solid var(--line);
+}
+
+.faq details {
+  border-bottom: 1px solid var(--line);
+  padding: 1.1rem 0;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: var(--mono);
+  color: var(--accent);
+}
+
+.faq details[open] summary::after {
+  content: "\2212";
+}
+
+.faq details p {
+  margin-top: 0.65rem;
+}
+
+/* Legal pages */
+.legal p + p {
+  margin-top: 1.15rem;
+}
+
+.legal h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 1.5rem;
+}
+
+/* Blog */
+.page-top {
+  padding-top: 160px;
+  border-top: 0;
+}
+
+.post-list {
+  list-style: none;
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+}
+
+.post-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.4rem;
+  background: var(--bg-module);
+}
+
+.post-card h2 {
+  font-size: 1.35rem;
+  margin: 0.4rem 0 0.65rem;
+}
+
+.post-card h2 a:hover {
+  color: var(--accent);
+}
+
+.post-meta {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
+.draft-banner {
+  background: var(--periwinkle);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  padding: 0.75rem 0;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.draft-banner strong {
+  font-family: var(--mono);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  margin-right: 0.4rem;
+}
+
+.draft-banner + main .page-top {
+  padding-top: 72px;
+}
+
+.post-header h1 {
+  font-size: clamp(2.1rem, 5vw, 3.1rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+}
+
+.byline .portrait,
+.byline .photo-placeholder {
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 auto;
+}
+
+.byline-name {
+  font-weight: 700;
+}
+
+.prose p,
+.prose ul {
+  margin-bottom: 1.15rem;
+}
+
+.prose h2 {
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
+  margin: 2.25rem 0 0.75rem;
+}
+
+.prose ul {
+  padding-left: 1.25rem;
+}
+
+.prose li + li {
+  margin-top: 0.4rem;
+}
+
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.editor-note {
+  background: var(--bg-module);
+  border-left: 3px solid var(--accent);
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+.post-end {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.post-end h2 {
+  margin-top: 0;
+}
+
+.post-end .btn {
+  margin-top: 0.5rem;
+}
+
+/* Desktop nav from 960px so five links and the booking button fit. */
+@media (min-width: 960px) {
   .nav-links {
     display: flex;
     flex: 1;
@@ -742,7 +964,9 @@ button {
   .nav-drawer.open {
     display: none;
   }
+}
 
+@media (min-width: 768px) {
   .hero h1 {
     font-size: 4.5rem;
   }
@@ -750,6 +974,17 @@ button {
   .modules {
     grid-template-columns: repeat(3, 1fr);
     align-items: stretch;
+  }
+
+  .about {
+    grid-template-columns: auto 1fr;
+    gap: 3.5rem;
+  }
+
+  .portrait,
+  .photo-placeholder {
+    width: 14rem;
+    height: 14rem;
   }
 
   .split {
@@ -764,8 +999,8 @@ button {
   }
 
   .footer-inner {
-    grid-template-columns: 1fr auto auto;
-    align-items: baseline;
+    grid-template-columns: 1fr auto;
+    align-items: end;
     gap: 2rem;
   }
 
