@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO(Evan): switch these URLs to https://periwynk.com/ once the domain points here. Add new posts at the top. -->
-<!-- TODO(Evan): the first post is still a DRAFT; check it before this feed goes live. -->
+<!-- TODO: switch these URLs to https://periwynk.com/ once the domain points here. Add new posts at the top. -->
+<!-- TODO: the first post is still a DRAFT; check it before this feed goes live. -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Periwynk blog</title>
     <link>https://cra.software/blog/</link>
     <atom:link href="https://cra.software/blog/rss.xml" rel="self" type="application/rss+xml"/>
-    <description>Notes from Evan at Periwynk on where the time goes in a small business, and what helps.</description>
+    <description>Notes from Periwynk on where the time goes in a small business, and what helps.</description>
     <language>en-gb</language>
     <lastBuildDate>Sat, 21 Nov 2026 09:00:00 -0600</lastBuildDate>
     <item>

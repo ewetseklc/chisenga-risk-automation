@@ -1,6 +1,6 @@
 # Periwynk
 
-Website for **Periwynk LLC** (formerly Chisenga Risk & Automation), run by Evan (Ewetse Chisenga) in St. Louis, Missouri. Evan helps owners of small service businesses spend less time on admin, working one to one and setting up the fixes with them.
+Website for **Periwynk LLC** (formerly Chisenga Risk & Automation), run by Ewetse Chisenga in St. Louis, Missouri. Ewetse helps owners of small service businesses spend less time on admin, working one to one and setting up the fixes with them.
 
 ## How the site works
 

@@ -736,29 +736,6 @@ button {
   color: var(--ink);
 }
 
-/* Round photo, used by the blog byline */
-.portrait,
-.photo-placeholder {
-  width: 11rem;
-  height: 11rem;
-  border-radius: 50%;
-  object-fit: cover;
-  background: var(--bg-module);
-  border: 1px solid var(--line);
-}
-
-.photo-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.photo-placeholder img {
-  width: 42%;
-  height: auto;
-  opacity: 0.55;
-}
-
 /* FAQ */
 .faq {
   margin-top: 2rem;
@@ -880,13 +857,6 @@ button {
   gap: 0.85rem;
   margin-bottom: 2.5rem;
   font-size: 0.95rem;
-}
-
-.byline .portrait,
-.byline .photo-placeholder {
-  width: 3rem;
-  height: 3rem;
-  flex: 0 0 auto;
 }
 
 .byline-name {

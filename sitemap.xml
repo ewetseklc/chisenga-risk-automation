@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO(Evan): switch these URLs to https://periwynk.com/ once the domain points here. -->
+<!-- TODO: switch these URLs to https://periwynk.com/ once the domain points here. -->
 <!-- Note: the blog post is marked noindex while it is a DRAFT. Search engines will skip it until you publish. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://cra.software/</loc><lastmod>2026-11-21</lastmod></url>
