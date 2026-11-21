@@ -6,14 +6,53 @@ Format: OLD -> NEW. "(new)" means added text and "(removed)" means deleted text.
 
 ---
 
+## Round 2 (21 Nov feedback)
+
+The owner said the logo colour doesn't match the rest of the site, the About section feels awkward, and the informal first name and the explanation of it should go: the owner is Ewetse everywhere, including LinkedIn. In the old copy below, that informal name is written as [informal name] so it doesn't appear in this file.
+
+### 1. Logo colour now matches the site
+- **Colour chosen: CTA blue #7692e4.** I measured which colour carries the site's key elements. Blue #7692e4 is used for the "what matters" highlight in the hero H1, every "Book a free 15-minute call" button (nav, hero, closing band and blog), the pipeline line and the mobile conveyor, and the hero artwork is shaded in the same family of blues. Violet #5c4fd4 appeared only in small things: text links, FAQ "+" signs, fit-list ticks, the blog editor-note rule and blog link hovers. (The CSS also gives section labels the accent, but `.section p` overrides it, so labels have always shown as #111111. I left that as it is.) So the violet flower sat right beside a blue button in the header, which is the mismatch the owner saw.
+- Header logo on every page now uses `assets/brand/periwynk-mark-a-blue.svg` and `assets/brand/periwynk-wordmark-blue-on-cream.svg`. The old violet copies were removed from the site. The logo pack in `brand/periwynk-logo/final/` is unchanged.
+- Wordmark: the letters stay #111111 (15.3:1 on cream). The wordmark file has no coloured letters; its unused accent style was also changed to the blue. The flower is a logo, so it has no contrast requirement, and it is the same blue as the buttons next to it.
+- Favicons re-rendered in #7692e4 with the pack's own scripts (copied to /tmp, colour swapped): `favicon.ico`, `favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png`. `favicon.svg` is #7692e4 in light mode and #a1b4ed in dark mode (a lighter tint of the same blue, 7.9:1 on a dark browser tab; plain #7692e4 would be 5.4:1).
+- Social image: new `assets/og/periwynk-launch-blue-1200.png` (new name so shared links pick up the new version). Every og:image, twitter:image and the JSON-LD image now point to it.
+- `theme-color` and `site.webmanifest`: unchanged (they use cream, which still matches).
+- CSS `--accent` was violet, so links and other small accents were still violet next to the blue logo. It is now #3454b2, a darker shade of the same blue, because #7692e4 is too light for small text on cream (2.4:1). #3454b2 is 5.6:1 on cream, 6.0:1 on the card colour and 4.5:1 on the periwinkle draft banner. This covers text links, FAQ "+" signs, post links and blog link hovers. (The round 2 colour commit message also mentions labels; as noted above, labels actually show as #111111.) A new `--blue: #7692e4` is used for the fit-list ticks and the blog editor-note rule. No violet is left in the site.
+
+### 2. About section removed
+- (removed) the whole `#about` section on the homepage: label "ABOUT ME", H2 "Hi, I’m [informal name].", the paragraph "I’m Ewetse Chisenga, and most people call me [informal name]. I’m based in St. Louis, Missouri, I studied Actuarial Science, and I work one to one with small business owners. I’d much rather talk in person or on LinkedIn than over a form, so come and say hello.", the "Find me on LinkedIn" link and the photo placeholder. LinkedIn is still linked from the footer on every page.
+- Nav: "Approach" / "Examples" / "About" / "Fit" / "Blog" -> "Approach" / "Examples" / "Fit" / "Blog" (desktop and mobile menu, every page).
+- CSS for the About layout and the photo placeholder removed.
+- Desktop nav breakpoint: 960px -> 768px. 960px was only needed for the fifth link. With four links and the button there is about 100px to spare at 768px (checked in headless Chrome at 768, 820, 880 and 960px).
+
+### 3. Informal name removed everywhere
+- JSON-LD founder: (removed) alternateName "[informal name] Chisenga". The founder is "Ewetse Chisenga".
+- `article:author` (post and template): "[informal name] Chisenga" -> "Ewetse Chisenga".
+- Blog post byline: photo placeholder + "[informal name] Chisenga" -> "Ewetse Chisenga" and the date only (template too).
+- Blog post: "It’s still me. Periwynk is one person: I’m [informal name], I’m based in St. Louis, and I work one to one with small business owners." -> "It’s still me, Ewetse Chisenga, based in St. Louis, working one to one with small business owners."
+- Blog post editor note: "[[informal name]: add a sentence or two on why you chose the name Periwynk.]" -> "[TODO: add a sentence or two on why you chose the name Periwynk.]"
+- Draft banner (post and template): "DRAFT [informal name] is still rewriting this post. It is not published yet." -> "DRAFT This post is still being written. It is not published yet."
+- Blog index intro: "Short, plain posts about where the time goes in a small business, and what helps. Written by me, [informal name]." -> "Short, plain posts about where the time goes in a small business, and what helps. Written by me, Ewetse Chisenga."
+- Blog index meta, og and twitter descriptions, and the RSS channel description: "Notes from [informal name] at Periwynk on where the time goes in a small business, and what helps." -> "Notes from Periwynk on where the time goes in a small business, and what helps."
+- Code comments in HTML, `sitemap.xml`, `blog/rss.xml` and `robots.txt`: "TODO([informal name]):" -> "TODO:".
+- `README.md`: "run by [informal name] (Ewetse Chisenga) in St. Louis, Missouri. [informal name] helps owners..." -> "run by Ewetse Chisenga in St. Louis, Missouri. Ewetse helps owners..."
+- This file: the round 1 notes below no longer quote the informal name, and "TODO for [informal name]" is now "TODO for the owner".
+
+### Round 2 checks
+- `rg -i` for the informal name across the repo (excluding `.git`) finds nothing in any site file, README, this file or `@V4-Homepage-Spec.md`.
+- No em dashes in any changed file.
+- Headless Chrome at 1440px and 390px: the flower matches the nav and hero buttons, and the layout is fine.
+
+---
+
 ## Every page (shared)
 
 ### Header
-- Logo: "CRA" text logo (animated letters) -> flower mark A + "Periwynk" wordmark (`/assets/brand/periwynk-mark-a.svg`, `/assets/brand/periwynk-wordmark-colour-on-cream.svg`). Alt text: "Periwynk". Link label: "Chisenga Risk & Automation home" -> "Periwynk home".
-- Nav: "Approach" / "Systems" / "Fit" -> "Approach" / "Examples" / "About" / "Fit" / "Blog".
+- Logo: "CRA" text logo (animated letters) -> flower mark A + "Periwynk" wordmark (`/assets/brand/periwynk-mark-a.svg`, `/assets/brand/periwynk-wordmark-colour-on-cream.svg`; recoloured and renamed in round 2). Alt text: "Periwynk". Link label: "Chisenga Risk & Automation home" -> "Periwynk home".
+- Nav: "Approach" / "Systems" / "Fit" -> "Approach" / "Examples" / "About" / "Fit" / "Blog". (Round 2 removed "About".)
 - Nav button: "Let’s Talk" (home) and "Map My Workflow" (Privacy/Terms) -> "Book a free 15-minute call".
 - Mobile menu (hamburger) now on every page, including Privacy, Terms and the blog. It closes when you pick a link or press Escape.
-- Desktop nav now shows from 960px (it was 768px) so five links and the longer button fit. Below 960px the menu button is used.
+- Desktop nav now shows from 960px (it was 768px) so five links and the longer button fit. Below 960px the menu button is used. (Round 2 put it back to 768px.)
 
 ### Footer
 - "Chisenga Risk & Automation (CRA)" -> "Periwynk LLC"
@@ -23,7 +62,7 @@ Format: OLD -> NEW. "(new)" means added text and "(removed)" means deleted text.
 
 ### Head and metadata
 - Old CRA favicon links removed (the `CRA Favicon.png` and `favicon.png` files are still in the repo). The logo pack's favicon snippet was added, along with `site.webmanifest` and `theme-color`.
-- Canonical, og:title/description/url/image (absolute URL `https://cra.software/assets/og/periwynk-launch-1200.png`, 1200x1200), og:site_name, twitter card/title/description/image. Every page has an RSS `<link rel="alternate">`.
+- Canonical, og:title/description/url/image (absolute URL `https://cra.software/assets/og/periwynk-launch-1200.png`, 1200x1200; replaced by `periwynk-launch-blue-1200.png` in round 2), og:site_name, twitter card/title/description/image. Every page has an RSS `<link rel="alternate">`.
 - Reveal animation fallback: an inline head script adds class `js` to `<html>`, and `.reveal` content is only hidden under `.js`. Without JavaScript everything shows (checked in headless Chrome with JS off).
 - Button text on the blue CTA: cream -> #111111 (contrast).
 - All pages now load one shared script, `/assets/site.js` (menu, reveal, nav background, hero parallax).
@@ -35,7 +74,7 @@ Format: OLD -> NEW. "(new)" means added text and "(removed)" means deleted text.
 ### Metadata
 - `<title>`: "Chisenga Risk & Automation | Less Busywork. More Room for What Matters." -> "Periwynk | Less busywork. More room for what matters."
 - meta/og/twitter description: "We help business owners simplify everyday work with practical automation that saves time, reduces wasted effort, and makes room for customers and life outside work." -> "I help owners of small service businesses spend less time on admin, like answering enquiries, chasing quotes and following up with customers. Start with a free 15-minute call."
-- JSON-LD: name "Chisenga Risk & Automation" -> "Periwynk LLC". Added alternateName "Chisenga Risk & Automation", logo, image and sameAs LinkedIn. founder is now a Person (Ewetse Chisenga, alternateName Evan Chisenga, LinkedIn). address now has addressCountry US. serviceType adds "Data analysis" and "Business process analysis" (no website building). description -> "Helping owners of small service businesses spend less time on admin, like answering enquiries, chasing quotes and following up with customers."
+- JSON-LD: name "Chisenga Risk & Automation" -> "Periwynk LLC". Added alternateName "Chisenga Risk & Automation", logo, image and sameAs LinkedIn. founder is now a Person (Ewetse Chisenga, an informal alternateName that round 2 removed, LinkedIn). address now has addressCountry US. serviceType adds "Data analysis" and "Business process analysis" (no website building). description -> "Helping owners of small service businesses spend less time on admin, like answering enquiries, chasing quotes and following up with customers."
 - Google Analytics: unchanged.
 
 ### Hero
@@ -69,11 +108,8 @@ Format: OLD -> NEW. "(new)" means added text and "(removed)" means deleted text.
 - Card 3 body: "An automated calling system we use to ask initial questions and direct promising enquiries to the right next step." -> "An automated calling system I use to ask the first questions and point promising enquiries to the right next step."
 - Card headings unchanged ("Reconnect with past customers", "Know who to follow up with", "Make the first conversation easier").
 
-### About (new section, `#about`, placed just before Working With Me)
-- (new) label "ABOUT ME", H2 "Hi, I’m Evan."
-- (new) "I’m Ewetse Chisenga, and most people call me Evan. I’m based in St. Louis, Missouri, I studied Actuarial Science, and I work one to one with small business owners. I’d much rather talk in person or on LinkedIn than over a form, so come and say hello."
-- (new) link "Find me on LinkedIn"
-- (new) round photo placeholder (cream circle with the faded flower mark), waiting for `/assets/evan.jpg`
+### About (new section, `#about`, placed just before Working With Me; removed in round 2)
+- (new) label "ABOUT ME", a greeting H2, a short paragraph about the owner, a "Find me on LinkedIn" link and a round photo placeholder. The whole section was removed in round 2, so its copy isn't repeated here.
 
 ### Working With Us -> Working With Me
 - Label: "WORKING WITH US" -> "WORKING WITH ME"
@@ -128,27 +164,27 @@ Format: OLD -> NEW. "(new)" means added text and "(removed)" means deleted text.
 - The whole old insurance page (unsourced stats, "30-day pilot", broken nav) -> a tiny redirect stub to `/` (meta refresh 0, canonical, `location.replace`, noindex). Visible text: "This page has moved. Go to the homepage." Nothing links to it any more.
 
 ## Blog (all new)
-- `/blog/index.html`: label "BLOG", H1 "Notes from Periwynk", intro "Short, plain posts about where the time goes in a small business, and what helps. Written by me, Evan.", "Follow with RSS" link, and a list of posts (title, date, summary). The one entry is marked "Draft".
-- `/blog/why-cra-is-now-periwynk/index.html`: "Why CRA is now Periwynk, and what isn’t changing", dated 21 November 2026, byline Evan Chisenga with a photo placeholder. It has a visible DRAFT banner and `<meta name="robots" content="noindex">`, plus og/twitter tags using the launch image. About 280 words. It ends with "Talk to me about this on LinkedIn" and the booking button. The "Why the new name" section is a visible placeholder ("[Evan: add a sentence or two on why you chose the name Periwynk.]") because no reason is on record and I didn't invent one.
+- `/blog/index.html`: label "BLOG", H1 "Notes from Periwynk", intro "Short, plain posts about where the time goes in a small business, and what helps. Written by me, [informal name]." (round 2: "Written by me, Ewetse Chisenga."), "Follow with RSS" link, and a list of posts (title, date, summary). The one entry is marked "Draft".
+- `/blog/why-cra-is-now-periwynk/index.html`: "Why CRA is now Periwynk, and what isn’t changing", dated 21 November 2026, byline under the informal name with a photo placeholder (round 2: "Ewetse Chisenga", no photo). It has a visible DRAFT banner and `<meta name="robots" content="noindex">`, plus og/twitter tags using the launch image. About 280 words. It ends with "Talk to me about this on LinkedIn" and the booking button. The "Why the new name" section is a visible placeholder ("[TODO: add a sentence or two on why you chose the name Periwynk.]" since round 2) because no reason is on record and I didn't invent one.
 - `/blog/_template.html`: a post template with usage notes in a comment. It is noindex with a draft banner by default. GitHub Pages (Jekyll) doesn't publish files whose names start with `_`, so the template stays private.
 - `/blog/rss.xml`: RSS 2.0 with the one post.
 
 ## Other files
 - New: `robots.txt` (allow all, plus a Sitemap line), `sitemap.xml` (home, blog, blog post, privacy, terms; cra.software URLs with a TODO).
-- New: `assets/brand/` (mark A, wordmark), `assets/og/periwynk-launch-1200.png`, favicons and `site.webmanifest` in the root, `assets/site.js`.
+- New: `assets/brand/` (mark A, wordmark), `assets/og/periwynk-launch-1200.png` (both replaced by blue versions in round 2), favicons and `site.webmanifest` in the root, `assets/site.js`.
 - `styles.css`: logo, contrast, reveal fallback, nowrap, about/photo, FAQ, legal, blog, draft banner and footer styles. The look, colours, fonts, hero art, cards and pipeline are unchanged.
 - `README.md`: rewritten to describe Periwynk and the static GitHub Pages setup. The old text described "AI-powered workflow automation for insurance agencies, TPAs, and mid-market carriers".
 
 ---
 
-## TODO for Evan
+## TODO for the owner
 
 1. **Switch URLs to periwynk.com** once the domain points here (and update `CNAME` then):
    - `index.html` (canonical, og:url, og:image, twitter:image, JSON-LD url/logo/image)
    - `privacy.html`, `terms.html`, `blog/index.html`, `blog/why-cra-is-now-periwynk/index.html`, `blog/_template.html` (canonical, og:url, og:image)
    - `how-it-works.html` (canonical)
    - `robots.txt` (Sitemap line), `sitemap.xml`, `blog/rss.xml`
-2. **Your photo:** save it as `/assets/evan.jpg`, then swap the placeholder div for the `<img>` given in the comment in `index.html` (About section) and `blog/why-cra-is-now-periwynk/index.html` (byline). The template has the same comment.
+2. ~~**Your photo**~~: no longer needed. Round 2 removed the About section and the byline photo.
 3. **Contact email:** add one (for example hello@periwynk.com) when the business inbox exists: `privacy.html` and `terms.html`, where the comment sits above the "Contact" line.
 4. **Prices (not published):** placeholders in `index.html` under 01 MAP (mapping session), 03 EXTEND (ongoing help) and the FAQ "What does it cost?".
 5. **BUILD label:** whether to rename "02 BUILD" is your call (`index.html`, comment in the BUILD card).
