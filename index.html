@@ -3,38 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chisenga Risk &amp; Automation | Less Busywork. More Room for What Matters.</title>
-  <link rel="icon" type="image/png" href="CRA%20Favicon.png">
-  <link rel="apple-touch-icon" href="CRA%20Favicon.png">
-  <meta name="description" content="We help business owners simplify everyday work with practical automation that saves time, reduces wasted effort, and makes room for customers and life outside work.">
-  <meta property="og:title" content="Chisenga Risk &amp; Automation | Less Busywork. More Room for What Matters.">
-  <meta property="og:description" content="We help business owners simplify everyday work with practical automation that saves time, reduces wasted effort, and makes room for customers and life outside work.">
-  <meta property="og:url" content="https://cra.software/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Chisenga Risk &amp; Automation | Less Busywork. More Room for What Matters.">
-  <meta name="twitter:description" content="We help business owners simplify everyday work with practical automation that saves time, reduces wasted effort, and makes room for customers and life outside work.">
+  <script>document.documentElement.classList.add("js");</script>
+  <title>Periwynk | Less busywork. More room for what matters.</title>
+  <meta name="description" content="I help owners of small service businesses spend less time on admin, like answering enquiries, chasing quotes and following up with customers. Start with a free 15-minute call.">
   <meta name="author" content="Ewetse Chisenga">
   <meta name="robots" content="index, follow">
+  <!-- TODO(Evan): switch canonical, og:url, og:image and JSON-LD URLs to https://periwynk.com/ once the domain points here. -->
+  <link rel="canonical" href="https://cra.software/">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ece7de">
+  <link rel="alternate" type="application/rss+xml" title="Periwynk blog" href="/blog/rss.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Periwynk">
+  <meta property="og:title" content="Periwynk | Less busywork. More room for what matters.">
+  <meta property="og:description" content="I help owners of small service businesses spend less time on admin, like answering enquiries, chasing quotes and following up with customers. Start with a free 15-minute call.">
+  <meta property="og:url" content="https://cra.software/">
+  <meta property="og:image" content="https://cra.software/assets/og/periwynk-launch-1200.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="The Periwynk flower mark and wordmark">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Periwynk | Less busywork. More room for what matters.">
+  <meta name="twitter:description" content="I help owners of small service businesses spend less time on admin, like answering enquiries, chasing quotes and following up with customers. Start with a free 15-minute call.">
+  <meta name="twitter:image" content="https://cra.software/assets/og/periwynk-launch-1200.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Chisenga Risk & Automation",
-  "url": "https://cra.software",
-  "description": "We help business owners simplify everyday work with practical automation that saves time, reduces wasted effort, and makes room for customers and life outside work.",
-  "founder": "Ewetse Chisenga",
+  "name": "Periwynk LLC",
+  "alternateName": "Chisenga Risk & Automation",
+  "url": "https://cra.software/",
+  "logo": "https://cra.software/icon-512.png",
+  "image": "https://cra.software/assets/og/periwynk-launch-1200.png",
+  "description": "Helping owners of small service businesses spend less time on admin, like answering enquiries, chasing quotes and following up with customers.",
+  "founder": {
+    "@type": "Person",
+    "name": "Ewetse Chisenga",
+    "alternateName": "Evan Chisenga",
+    "sameAs": "https://www.linkedin.com/in/ewetsechisenga/"
+  },
   "areaServed": "United States",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "St. Louis",
-    "addressRegion": "MO"
+    "addressRegion": "MO",
+    "addressCountry": "US"
   },
-  "serviceType": ["Workflow mapping", "Process automation", "Operational systems"]
+  "sameAs": ["https://www.linkedin.com/in/ewetsechisenga/"],
+  "serviceType": ["Workflow mapping", "Process automation", "Operational systems", "Data analysis", "Business process analysis"]
 }
   </script>
   <!-- Google tag (gtag.js) -->
@@ -51,13 +76,18 @@
   <header>
     <nav class="nav" aria-label="Primary">
       <div class="wrap nav-inner">
-        <a href="index.html" class="logo" aria-label="Chisenga Risk &amp; Automation home"><span>C</span><span>R</span><span>A</span></a>
+        <a href="/" class="logo" aria-label="Periwynk home">
+          <img class="logo-mark" src="/assets/brand/periwynk-mark-a.svg" alt="" width="26" height="26">
+          <img class="logo-word" src="/assets/brand/periwynk-wordmark-colour-on-cream.svg" alt="Periwynk" width="79" height="18">
+        </a>
         <ul class="nav-links">
           <li><a href="#approach">Approach</a></li>
-          <li><a href="#systems">Systems</a></li>
+          <li><a href="#examples">Examples</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#fit">Fit</a></li>
+          <li><a href="/blog/">Blog</a></li>
         </ul>
-        <a href="https://cal.com/cra-cal/workflow-mapping-session" class="btn btn-nav" target="_blank" rel="noopener noreferrer">Let’s Talk</a>
+        <a href="https://calendly.com/ewetsekchisenga/new-meeting" class="btn btn-nav" target="_blank" rel="noopener noreferrer">Book a free 15-minute call</a>
         <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navDrawer" aria-label="Open menu">
           <span></span><span></span>
         </button>
@@ -65,9 +95,11 @@
     </nav>
     <div class="nav-drawer" id="navDrawer">
       <a href="#approach">Approach</a>
-      <a href="#systems">Systems</a>
+      <a href="#examples">Examples</a>
+      <a href="#about">About</a>
       <a href="#fit">Fit</a>
-      <a href="https://cal.com/cra-cal/workflow-mapping-session" target="_blank" rel="noopener noreferrer">Let’s Talk</a>
+      <a href="/blog/">Blog</a>
+      <a href="https://calendly.com/ewetsekchisenga/new-meeting" target="_blank" rel="noopener noreferrer">Book a free 15-minute call</a>
     </div>
   </header>
 
@@ -77,13 +109,13 @@
       <div class="wrap hero-inner reveal">
         <div class="hero-copy">
           <h1>Less busywork. More room for <span class="text-highlight">what matters.</span></h1>
-          <p>We help you untangle the everyday work that takes more time and energy than it should. Together, we build practical systems that reduce wasted effort, recover missed opportunities, and give you room to focus on your customers and your life outside work.</p>
-          <a href="https://cal.com/cra-cal/workflow-mapping-session" class="btn" target="_blank" rel="noopener noreferrer">Let’s Talk</a>
-          <p class="micro">A 45-minute conversation about what’s draining your energy and how we can make things easier.</p>
+          <p>I help owners of small service businesses spend less time on admin, like answering enquiries, chasing quotes and following up with customers. We look at how the work happens now, then I set up the fixes with you.</p>
+          <a href="https://calendly.com/ewetsekchisenga/new-meeting" class="btn" target="_blank" rel="noopener noreferrer">Book a free 15-minute call</a>
+          <p class="micro">A free 15-minute call to find one thing eating up your week.</p>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <img src="A.png" alt="">
+        <img src="/A.png" alt="">
       </div>
     </section>
 
@@ -91,25 +123,27 @@
       <div class="wrap narrow reveal">
         <p class="label">THE DAY-TO-DAY</p>
         <h2>The little things can take over your day.</h2>
-        <p>Following up with an enquiry. Copying details between tools. Checking that nothing has been missed. Each task seems small, until they fill your day and follow you home. We look closely at where your time and money are slipping away, then help take that work off your plate.</p>
+        <p>Following up with an enquiry. Copying details between tools. Checking that nothing has been missed. Each task seems small, until they fill your day and follow you home. I look closely at where your time and money are going, then help take that work off your plate.</p>
       </div>
     </section>
 
     <section class="section" id="approach">
       <div class="wrap">
         <div class="reveal">
-          <p class="label">OUR APPROACH</p>
-          <h2>First, we listen. Then, we make things simpler.</h2>
-          <p class="lead">You know your business. We bring a fresh pair of eyes and the technical skill to connect the pieces. Together, we decide what is worth changing and what is already working well.</p>
+          <p class="label">MY APPROACH</p>
+          <h2>First, I listen. Then, I help make things simpler.</h2>
+          <p class="lead">You know your business. I bring a fresh pair of eyes and the technical skill to connect the pieces. We decide together what is worth changing and what is already working well.</p>
         </div>
         <ol class="ladder">
           <li class="ladder-step reveal">
             <span class="tag">01 MAP</span>
-            <p class="ladder-copy">We start with your day-to-day. You show us what happens, where things get held up, and what keeps landing back on your desk. Together, we choose a clear place to start.</p>
+            <p class="ladder-copy">It starts with a free 15-minute call to find one thing eating up your week. If it looks useful, the next step is a paid mapping session. You show me what happens day to day, where things get held up, and what keeps landing back on your desk. Then we choose a clear place to start.</p>
+            <!-- TODO(Evan): mapping session price could go here once you decide to publish it. Not published for now. -->
           </li>
           <li class="ladder-step ladder-step--build reveal">
             <span class="tag">02 BUILD</span>
-            <p class="ladder-copy">We build around the tools and routines you already use. We handle the technical work, explain the changes clearly, and focus on saving time and keeping valuable opportunities from slipping away.</p>
+            <!-- TODO(Evan): renaming the BUILD label is your call. Body copy updated to the "with you" wording. -->
+            <p class="ladder-copy">I set up the fixes with you, starting with the tools and routines you already use. I handle the technical side and explain each change clearly, so you save time and fewer enquiries get missed.</p>
             <div class="workflow" aria-label="A new enquiry reaches the right person and its details are saved">
               <div class="workflow-shell">
                 <svg class="workflow-line" viewBox="0 0 100 2" preserveAspectRatio="none" aria-hidden="true">
@@ -135,34 +169,52 @@
           </li>
           <li class="ladder-step reveal">
             <span class="tag">03 EXTEND</span>
-            <p class="ladder-copy">We check what is working and refine what needs attention. As your business changes, we help the system keep up, with improvements guided by the results you can see.</p>
+            <p class="ladder-copy">After that, ongoing help is optional. I check what is working, fix what needs attention, and help things keep up as your business changes.</p>
+            <!-- TODO(Evan): ongoing (monthly) help price could go here once it is set. Not published for now. -->
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="section" id="systems">
+    <section class="section" id="examples">
       <div class="wrap">
         <div class="reveal">
-          <p class="label">OUR WORK</p>
-          <h2>Practical systems. Everyday relief.</h2>
+          <p class="label">EXAMPLES</p>
+          <h2>Examples of what I set up</h2>
+          <p class="section-note">These are examples of the kind of thing I set up, including tools I use in my own business. They are not client case studies.</p>
         </div>
         <div class="modules">
           <article class="module reveal">
-            <p class="tag">CLIENT WORK</p>
+            <p class="tag">EXAMPLE</p>
             <h3>Reconnect with past customers</h3>
-            <p>A text-message and booking system for a field service business, helping past customers hear from the team when it is time to book again.</p>
+            <p>An example of the kind of system I set up: text messages and a booking link that remind past customers when it is time to book again.</p>
           </article>
           <article class="module reveal">
-            <p class="tag">BUILT FOR OUR BUSINESS</p>
+            <p class="tag">IN MY OWN BUSINESS</p>
             <h3>Know who to follow up with</h3>
-            <p>A system we use to organise prospect lists and understand which enquiries are worth pursuing, so follow-up starts with a clearer picture.</p>
+            <p>A system I use to organise prospect lists and see which enquiries are worth following up, so I start with a clearer picture.</p>
           </article>
           <article class="module reveal">
-            <p class="tag">IN USE IN OUR BUSINESS</p>
+            <p class="tag">IN MY OWN BUSINESS</p>
             <h3>Make the first conversation easier</h3>
-            <p>An automated calling system we use to ask initial questions and direct promising enquiries to the right next step.</p>
+            <p>An automated calling system I use to ask the first questions and point promising enquiries to the right next step.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap about reveal">
+        <!-- TODO(Evan): add your photo at /assets/evan.jpg, then replace this placeholder div with:
+             <img class="portrait" src="/assets/evan.jpg" alt="Evan Chisenga" width="224" height="224"> -->
+        <div class="photo-placeholder" role="img" aria-label="Photo of Evan coming soon">
+          <img src="/assets/brand/periwynk-mark-a.svg" alt="">
+        </div>
+        <div class="about-copy">
+          <p class="label">ABOUT ME</p>
+          <h2>Hi, I’m Evan.</h2>
+          <p>I’m Ewetse Chisenga, and most people call me Evan. I’m based in St. Louis, Missouri, I studied Actuarial Science, and I work one to one with small business owners. I’d much rather talk in person or on LinkedIn than over a form, so come and say hello.</p>
+          <p><a class="text-link" href="https://www.linkedin.com/in/ewetsechisenga/" target="_blank" rel="noopener noreferrer">Find me on LinkedIn</a></p>
         </div>
       </div>
     </section>
@@ -170,12 +222,12 @@
     <section class="section" id="firm">
       <div class="wrap split reveal">
         <div>
-          <p class="label">WORKING WITH US</p>
+          <p class="label">WORKING WITH ME</p>
           <h2>Your business matters. So does the person running it.</h2>
         </div>
         <div class="split-copy">
-          <p>We take time to understand what you are carrying before suggesting what to change. We work month-to-month, agree on a clear measure of progress, and handle the technical details so you can stay focused on your customers and your team.</p>
-          <p>Our background in actuarial science and data analysis brings care and rigour to the work. We look at where time and money are being lost, build around the evidence, and measure the difference. The aim is a business that runs more smoothly and asks less of you.</p>
+          <p>I take time to understand what you are carrying before suggesting what to change. Ongoing help is month-to-month. We agree on a clear measure of progress, and I handle the technical details so you can stay focused on your customers and your team.</p>
+          <p>My background in actuarial science and data analysis brings care and rigour to the work. I look at where time and money are being lost, work from the evidence, and measure the difference. The aim is a business that runs more smoothly and asks less of you.</p>
         </div>
       </div>
     </section>
@@ -195,11 +247,43 @@
       </div>
     </section>
 
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="label">FAQ</p>
+          <h2>A few things you might be wondering.</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>What happens on the free call?</summary>
+            <p>It takes 15 minutes. You tell me what is taking up your time, and we find one thing eating up your week. If I can help, I explain what the next step would look like.</p>
+          </details>
+          <details>
+            <summary>What does it cost?</summary>
+            <p>The first call is free. If it is useful, the next step is a paid mapping session. You can then choose ongoing help if you want it. I can talk you through the price on the call.</p>
+            <!-- TODO(Evan): add the mapping session and ongoing help prices here if you decide to publish them. -->
+          </details>
+          <details>
+            <summary>How involved do I need to be?</summary>
+            <p>You show me how the work happens today. I set up the fixes with you and explain what I am changing as I go.</p>
+          </details>
+          <details>
+            <summary>Do I have to change the tools I use?</summary>
+            <p>I start with what you already use. If I think something different would help, I explain why and talk it through with you before changing anything.</p>
+          </details>
+          <details>
+            <summary>Can I work with you remotely?</summary>
+            <p>Yes. Most of the work happens over video calls, so it doesn’t matter where you are.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-band" id="book">
       <div class="wrap cta-inner reveal">
-        <h2>Let’s untangle the day-to-day together.</h2>
-        <a href="https://cal.com/cra-cal/workflow-mapping-session" class="btn btn-on-dark" target="_blank" rel="noopener noreferrer">Let’s Talk</a>
-        <p class="micro">In 45 minutes, we’ll talk about your setup, find what is draining your energy, and map out a simpler way to run things. We care about you as well as your business. Please join from a computer so we can share screens.</p>
+        <h2>Let’s make the <span class="nowrap">day-to-day</span> easier.</h2>
+        <a href="https://calendly.com/ewetsekchisenga/new-meeting" class="btn btn-on-dark" target="_blank" rel="noopener noreferrer">Book a free 15-minute call</a>
+        <p class="micro">In 15 minutes, we talk about how your days go and pick one thing worth fixing first. We care about you as well as your business.</p>
       </div>
     </section>
 
@@ -207,77 +291,21 @@
 
   <footer class="footer">
     <div class="wrap footer-inner">
-      <p>Chisenga Risk &amp; Automation (CRA)</p>
-      <p>St. Louis, Missouri</p>
+      <div class="footer-brand">
+        <p><strong>Periwynk LLC</strong></p>
+        <p>St. Louis, Missouri</p>
+        <p>formerly Chisenga Risk &amp; Automation</p>
+      </div>
       <p class="footer-links">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/blog/">Blog</a>
         <a href="https://www.linkedin.com/in/ewetsechisenga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
       </p>
     </div>
   </footer>
 
-  <script>
-    const toggle = document.getElementById("navToggle");
-    const drawer = document.getElementById("navDrawer");
-
-    toggle.addEventListener("click", () => {
-      const open = drawer.classList.toggle("open");
-      toggle.classList.toggle("active", open);
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    });
-
-    drawer.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        drawer.classList.remove("open");
-        toggle.classList.remove("active");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-label", "Open menu");
-      });
-    });
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-    const nav = document.querySelector(".nav");
-    const updateNavState = () => nav.classList.toggle("nav-scrolled", window.scrollY > 50);
-
-    updateNavState();
-    window.addEventListener("scroll", updateNavState, { passive: true });
-
-    const heroVisual = document.querySelector(".hero-visual");
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    if (heroVisual && !reduceMotion.matches) {
-      let frameRequested = false;
-
-      const updateHeroParallax = () => {
-        heroVisual.style.translate = `0 ${window.scrollY * 0.12}px`;
-        frameRequested = false;
-      };
-
-      const requestHeroParallax = () => {
-        if (!frameRequested) {
-          window.requestAnimationFrame(updateHeroParallax);
-          frameRequested = true;
-        }
-      };
-
-      updateHeroParallax();
-      window.addEventListener("scroll", requestHeroParallax, { passive: true });
-    }
-  </script>
+  <script src="/assets/site.js"></script>
 
 </body>
 </html>
