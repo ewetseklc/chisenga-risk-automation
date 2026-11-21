@@ -736,14 +736,7 @@ button {
   color: var(--ink);
 }
 
-/* Hi, I'm Evan */
-.about {
-  display: grid;
-  gap: 2rem;
-  align-items: center;
-}
-
-/* Photo placeholder: swap the .photo-placeholder div for <img src="/assets/evan.jpg" class="portrait"> */
+/* Round photo, used by the blog byline */
 .portrait,
 .photo-placeholder {
   width: 11rem;
@@ -764,10 +757,6 @@ button {
   width: 42%;
   height: auto;
   opacity: 0.55;
-}
-
-.about-copy p + p {
-  margin-top: 1.15rem;
 }
 
 /* FAQ */
@@ -950,8 +939,8 @@ button {
   margin-top: 0.5rem;
 }
 
-/* Desktop nav from 960px so five links and the booking button fit. */
-@media (min-width: 960px) {
+/* Desktop nav from 768px: four links and the booking button fit from here. */
+@media (min-width: 768px) {
   .nav-links {
     display: flex;
     flex: 1;
@@ -977,17 +966,6 @@ button {
   .modules {
     grid-template-columns: repeat(3, 1fr);
     align-items: stretch;
-  }
-
-  .about {
-    grid-template-columns: auto 1fr;
-    gap: 3.5rem;
-  }
-
-  .portrait,
-  .photo-placeholder {
-    width: 14rem;
-    height: 14rem;
   }
 
   .split {
