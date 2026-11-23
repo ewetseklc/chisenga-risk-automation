@@ -5,7 +5,7 @@ Website for **Periwynk LLC** (formerly Chisenga Risk & Automation), run by Ewets
 ## How the site works
 
 - Plain static HTML, one `styles.css` and one small script (`assets/site.js`). No build step and no framework.
-- Hosted on **GitHub Pages** from the repo root. `CNAME` currently points at `cra.software`.
+- Hosted on **GitHub Pages** from the repo root. `CNAME` points at `periwynk.com`.
 - GitHub Pages has no server redirects, so `how-it-works.html` is a small stub that sends visitors to the homepage.
 
 ## Layout

@@ -1,8 +1,19 @@
 # Periwynk rebrand and review fixes (21 November 2026)
 
-Branch: `periwynk-preview`. The live version is tagged `pre-periwynk-2026-11-21`, which hasn't been touched. Nothing has been pushed or deployed, and DNS and `CNAME` are unchanged. Spec: `site-review-2026-11-21/review.md`.
+Branch: `periwynk-preview`. The live cra.software site is still `main` at `4707224`, backed up as tags `pre-periwynk-2026-11-21` and `live-main-2026-11-23` (and branch `backup/live-main-2026-11-23`). Nothing has been merged to `main` or pushed, and DNS has not been changed. Spec: `site-review-2026-11-21/review.md`.
 
 Format: OLD -> NEW. "(new)" means added text and "(removed)" means deleted text.
+
+---
+
+## Round 3 (23 Nov launch prep)
+
+The owner asked to use periwynk.com as soon as possible. This round prepares the preview branch only. DNS was not changed, and `main` was not updated.
+
+- Canonical URLs, Open Graph and Twitter image URLs, JSON-LD urls, `robots.txt` Sitemap, `sitemap.xml`, `blog/rss.xml`, `how-it-works.html` and `CNAME` now use `https://periwynk.com` / `periwynk.com`.
+- **Launch post:** unlisted rather than published with a missing name reason. `/blog/why-cra-is-now-periwynk/` is still in the repo as a draft (`noindex`, draft banner, placeholder sentence kept). It was removed from the blog index, the sitemap and the RSS feed. The blog index now says "No posts yet. The first one will appear here."
+- **Contact email:** still not added. The live cra.software site has no published email (contact is LinkedIn and the booking page only). The TODOs on Privacy and Terms remain.
+- `@V4-Homepage-Spec.md` was left as a historical CRA document, so it still mentions cra.software. GitHub Pages will still serve it if it stays in the repo.
 
 ---
 
@@ -179,21 +190,17 @@ The owner said the logo colour doesn't match the rest of the site, the About sec
 
 ## TODO for the owner
 
-1. **Switch URLs to periwynk.com** once the domain points here (and update `CNAME` then):
-   - `index.html` (canonical, og:url, og:image, twitter:image, JSON-LD url/logo/image)
-   - `privacy.html`, `terms.html`, `blog/index.html`, `blog/why-cra-is-now-periwynk/index.html`, `blog/_template.html` (canonical, og:url, og:image)
-   - `how-it-works.html` (canonical)
-   - `robots.txt` (Sitemap line), `sitemap.xml`, `blog/rss.xml`
+1. ~~**Switch URLs to periwynk.com**~~: done in Round 3 on `periwynk-preview` (canonical, og, Twitter, JSON-LD, CNAME, robots, sitemap, RSS). DNS and the push to `main` are still outstanding.
 2. ~~**Your photo**~~: no longer needed. Round 2 removed the About section and the byline photo.
 3. **Contact email:** add one (for example hello@periwynk.com) when the business inbox exists: `privacy.html` and `terms.html`, where the comment sits above the "Contact" line.
 4. **Prices (not published):** placeholders in `index.html` under 01 MAP (mapping session), 03 EXTEND (ongoing help) and the FAQ "What does it cost?".
 5. **BUILD label:** whether to rename "02 BUILD" is your call (`index.html`, comment in the BUILD card).
-6. **Blog post:** rewrite it in your own words and add your reason for the name (`blog/why-cra-is-now-periwynk/index.html`). To publish: delete the DRAFT banner, change robots to `index, follow`, and remove "· Draft" in `blog/index.html`. Check it before `blog/rss.xml` goes live.
+6. **Blog post:** still a draft. Unlisted in Round 3 until the name reason is written (`blog/why-cra-is-now-periwynk/index.html`). To publish: add the reason, delete the DRAFT banner, change robots to `index, follow`, list it on `blog/index.html`, and add it to `blog/rss.xml` and `sitemap.xml`.
 7. **Closing band:** decide whether to bring back "Please join from a computer so we can share screens" (see above).
 
 ## Not done, and why
 - **DSO email** (review action 1, due about 1 Dec): outside the website; still to do.
-- **Redirect cra.software -> periwynk.com, DNS, CNAME, push/deploy:** not allowed in this task.
+- **Redirect cra.software -> periwynk.com, DNS, push/deploy:** not done in Round 3 (CNAME and on-page URLs were updated on the preview branch only).
 - **Contact email:** not added, as instructed (TODO above).
 - **Prices ($999 and monthly):** not published, as instructed.
 - **Google Analytics on Privacy, Terms and the blog:** only the homepage had it, and I was told to keep GA as is, so I didn't add it. Add the same tag to the blog pages if you want to track the blog as a funnel.

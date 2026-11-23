@@ -1,5 +1,4 @@
-# TODO: switch the Sitemap URL to https://periwynk.com/sitemap.xml once the domain points here.
 User-agent: *
 Allow: /
 
-Sitemap: https://cra.software/sitemap.xml
+Sitemap: https://periwynk.com/sitemap.xml
