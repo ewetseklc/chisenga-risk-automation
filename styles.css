@@ -1041,3 +1041,19 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Breadcrumbs on inner pages */
+.crumbs {
+  margin: 0 0 1.5rem;
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+.crumbs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.crumbs a:hover,
+.crumbs a:focus-visible {
+  text-decoration: underline;
+}

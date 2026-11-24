@@ -1,0 +1,61 @@
+# Periwynk
+
+> Periwynk LLC helps owners of small service businesses spend less time on admin, like answering enquiries, chasing quotes and following up with customers.
+
+Periwynk is a one-to-one practice run by Ewetse Chisenga in St. Louis, Missouri. It was formerly called Chisenga Risk & Automation, or CRA.
+
+## What it does
+
+Ewetse looks at how the work happens now, then sets up the fixes with the owner, starting with the tools and routines they already use. The aim is less time on admin, so there is more room for what matters.
+
+## Who it is for
+
+A good place to start if:
+
+- The same repetitive tasks keep taking time away from customers, the team, or home.
+- Missed follow-ups, duplicate work, or delays are costing money.
+- The owner wants a simpler way of working, with someone to help figure it out.
+- They are ready to share how things work today, even if it feels a little messy.
+
+Most of the work happens over video calls, so it does not matter where the owner is.
+
+## How it works
+
+The work is done with you, not only for you.
+
+1. MAP. It starts with a free 15-minute call to find one thing eating up the week. If it looks useful, the next step is a paid mapping session. The owner shows what happens day to day, where things get held up, and what keeps landing back on their desk. Then a clear place to start is chosen.
+2. BUILD. Ewetse sets up the fixes with the owner, starting with the tools and routines they already use. He handles the technical side and explains each change clearly.
+3. EXTEND. After that, ongoing help is optional and month-to-month. He checks what is working, fixes what needs attention, and helps things keep up as the business changes.
+
+The first call is free. Prices for the mapping session and ongoing help are talked through on the call. They are not published on the website.
+
+## Examples
+
+The website shows examples of the kind of thing Ewetse sets up, including systems he uses in his own business. They are not client case studies and should not be treated as client results:
+
+- Reconnect with past customers: text messages and a booking link that remind past customers when it is time to book again.
+- Know who to follow up with: a system he uses to organise prospect lists and see which enquiries are worth following up.
+- Make the first conversation easier: an automated calling system he uses to ask the first questions and point promising enquiries to the right next step.
+
+## Background
+
+Ewetse studied Actuarial Science. He looks at the numbers: where time and money are being lost, and whether a change actually makes a difference.
+
+## Pages
+
+- [Home](https://periwynk.com/): overview, who it is for, and examples
+- [Approach](https://periwynk.com/approach/): MAP, BUILD and EXTEND, plus frequent questions
+- [Blog](https://periwynk.com/blog/): notes from Periwynk
+- [Why CRA is now Periwynk](https://periwynk.com/blog/why-cra-is-now-periwynk/): the name change, in Ewetse's own words
+- [Privacy](https://periwynk.com/privacy.html)
+- [Terms](https://periwynk.com/terms.html)
+- [Book a free 15-minute call](https://calendly.com/ewetsekchisenga/new-meeting)
+- [Ewetse Chisenga on LinkedIn](https://www.linkedin.com/in/ewetsechisenga/)
+
+## Contact
+
+There is no public email address on the website. The way to get in touch is the free 15-minute call or a message on LinkedIn.
+
+## Optional longer summary
+
+See [llms-full.txt](https://periwynk.com/llms-full.txt) for a fuller plain-language version of the public site copy.
